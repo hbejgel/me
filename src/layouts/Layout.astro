@@ -5,7 +5,8 @@
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>Henrique Bejgel</title>
+		<meta name="description" content="I'm  a Software Engineer working for Google with a passion for tackling relevant issues. I'm also into game design, especially for boardgames and other analog media" />
 	</head>
 	<body>
 		<slot />
@@ -18,5 +19,36 @@
 		margin: 0;
 		width: 100%;
 		height: 100%;
+		background: #181425;
+		color: #fff1e8;
+		font-family: 'VT323', 'Fira Mono', 'Consolas', monospace;
+		letter-spacing: 0.03em;
+		/* Scanline effect */
+		background-image: repeating-linear-gradient(
+			to bottom,
+			#181425 0px,
+			#181425 2px,
+			#1a1c2c 3px,
+			#181425 4px
+		);
+	}
+	a {
+		color: #00e756;
+		text-decoration: none;
+		transition: color 0.2s;
+	}
+	a:hover {
+		color: #29adff;
+	}
+	/* Retro border */
+	body {
+		border: 8px solid #00e756;
+		box-sizing: border-box;
+		max-width: 700px;
+		margin: 32px auto;
+		border-radius: 12px;
+		box-shadow: 0 0 32px #0008;
+		padding: 32px 24px;
 	}
 </style>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet" />
