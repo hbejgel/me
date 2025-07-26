@@ -1,0 +1,29 @@
+    name: Deploy Astro to GitHub Pages
+
+    on:
+      push:
+        branches:
+          - main # or your primary branch
+
+    jobs:
+      build-and-deploy:
+        runs-on: ubuntu-latest
+        steps:
+          - name: Checkout repository
+            uses: actions/checkout@v3
+
+          - name: Setup Node.js
+            uses: actions/setup-node@v3
+            with:
+              node-version: '22' # or your preferred Node.js version
+
+          - name: Install dependencies
+            run: npm ci # or yarn install / pnpm install
+
+          - name: Build Astro project
+            run: npm run build # or yarn build / pnpm build
+
+          - name: Deploy to GitHub Pages
+            uses: withastro/action@v0.5.0 # Use the latest version
+            with:
+              path: ./dist # Adjust if your build output directory is different
