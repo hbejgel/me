@@ -47,11 +47,7 @@ import OdysseyLayout from '../layouts/OdysseyLayout.astro';
           <p>After 10 years of war, Troy falls. Odysseus begins his journey home to Ithaca, but the gods have other plans...</p>
         </div>
         <div class="location-marker">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <rect x="4" y="4" width="16" height="16" fill="#ff004d"/>
-            <rect x="6" y="6" width="12" height="12" fill="#181425"/>
-            <rect x="8" y="8" width="8" height="8" fill="#ff004d"/>
-          </svg>
+          <img src="/me/public/troy-icon.png" alt="Troy" width="128" height="128" />
         </div>
       </div>
 
@@ -254,11 +250,11 @@ import OdysseyLayout from '../layouts/OdysseyLayout.astro';
 
   /* Water/Wave Effects */
   .water-layer {
-    min-width: 3000px;
+    min-width: 6000px;
     position: absolute;
     bottom: 0;
     left: 0;
-    height: 40%;
+    height: 55%;
     pointer-events: none;
     z-index: 1;
     background: linear-gradient(180deg, rgba(135, 206, 235, 0.3) 0%, rgba(70, 130, 180, 0.4) 100%);
