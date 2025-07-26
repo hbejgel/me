@@ -9,15 +9,14 @@ import OdysseyLayout from '../layouts/OdysseyLayout.astro';
       <h1>The Odyssey</h1>
     </div>
     
-    <!-- Water/Wave Effects -->
-    <div class="water-layer">
-      <div class="wave"></div>
-      <div class="wave"></div>
-      <div class="wave"></div>
-      <div class="foam"></div>
-    </div>
-
     <div class="journey-track">
+      <!-- Water/Wave Effects -->
+      <div class="water-layer">
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="foam"></div>
+      </div>
       <!-- Odysseus Character -->
       <div class="odysseus-character">       
         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="64" height="64">
@@ -318,7 +317,7 @@ import OdysseyLayout from '../layouts/OdysseyLayout.astro';
 
   /* Water/Wave Effects */
   .water-layer {
-    min-width: 6000px;
+    width: 100%;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -494,7 +493,7 @@ import OdysseyLayout from '../layouts/OdysseyLayout.astro';
   .journey-track {
     display: flex;
     align-items: center;
-    min-width: 3000px;
+    width: 100%;
     height: 100%;
     padding: 0;
     position: relative;
@@ -642,6 +641,8 @@ import OdysseyLayout from '../layouts/OdysseyLayout.astro';
     const odysseus = document.querySelector('.odysseus-character');
     const encounters = document.querySelectorAll('.encounter');
     const lotusSwimmingMen = document.querySelector('#lotus-animation .swimming-men');
+
+    document.querySelector('.journey-track').style.minWidth = container.scrollWidth + 'px';
 
     if (!container || !odysseus) return;
 
