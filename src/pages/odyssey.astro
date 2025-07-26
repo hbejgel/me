@@ -290,6 +290,32 @@ import OdysseyLayout from '../layouts/OdysseyLayout.astro';
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   }
 
+  /* Mobile responsive adjustments */
+  @media (max-width: 768px) {
+    .page-title {
+      padding: 10px 0;
+    }
+    
+    .page-title h1 {
+      font-size: 1.5rem;
+      letter-spacing: 0.05em;
+    }
+    
+    .text-bubble {
+      margin-top: 60px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .page-title h1 {
+      font-size: 1.2rem;
+    }
+    
+    .text-bubble {
+      margin-top: 50px;
+    }
+  }
+
   /* Water/Wave Effects */
   .water-layer {
     min-width: 6000px;
