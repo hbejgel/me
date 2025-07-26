@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Odysseus' Journey - Henrique Bejgel</title>
+		<meta name="description" content="Follow Odysseus' epic journey home in this interactive horizontal scrolling experience" />
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+
+<style>
+	html,
+	body {
+		margin: 0;
+		width: 100%;
+		height: 100%;
+		background: #181425;
+		color: #fff1e8;
+		font-family: 'VT323', 'Fira Mono', 'Consolas', monospace;
+		letter-spacing: 0.03em;
+		/* Scanline effect */
+		background-image: repeating-linear-gradient(
+			to bottom,
+			#181425 0px,
+			#181425 2px,
+			#1a1c2c 3px,
+			#181425 4px
+		);
+	}
+	a {
+		color: #00e756;
+		text-decoration: none;
+		transition: color 0.2s;
+	}
+	a:hover {
+		color: #29adff;
+	}
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet" /> 

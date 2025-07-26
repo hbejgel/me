@@ -1,0 +1,374 @@
+---
+import OdysseyLayout from '../layouts/OdysseyLayout.astro';
+---
+
+<OdysseyLayout>
+  <div class="odyssey-container">
+    <div class="journey-track">
+      <!-- Odysseus Character -->
+      <div class="odysseus-character">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="32" height="32" fill="none"/>
+          <!-- Simple pixel art Odysseus -->
+          <rect x="12" y="8" width="8" height="4" fill="#00e756"/> <!-- helmet -->
+          <rect x="10" y="12" width="12" height="8" fill="#00e756"/> <!-- body -->
+          <rect x="8" y="20" width="4" height="8" fill="#00e756"/> <!-- left arm -->
+          <rect x="20" y="20" width="4" height="8" fill="#00e756"/> <!-- right arm -->
+          <rect x="12" y="20" width="8" height="8" fill="#00e756"/> <!-- legs -->
+        </svg>
+      </div>
+
+      <!-- Troy - Starting Point -->
+      <div class="encounter" id="troy">
+        <div class="location-marker">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <rect x="4" y="4" width="16" height="16" fill="#ff004d"/>
+            <rect x="6" y="6" width="12" height="12" fill="#181425"/>
+            <rect x="8" y="8" width="8" height="8" fill="#ff004d"/>
+          </svg>
+        </div>
+        <div class="text-bubble">
+          <h3>Troy</h3>
+          <p>After 10 years of war, Troy falls. Odysseus begins his journey home to Ithaca, but the gods have other plans...</p>
+        </div>
+      </div>
+
+      <!-- Lotus-Eaters -->
+      <div class="encounter" id="lotus-eaters">
+        <div class="location-marker">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="8" fill="#29adff"/>
+            <circle cx="12" cy="12" r="4" fill="#181425"/>
+          </svg>
+        </div>
+        <div class="text-bubble">
+          <h3>Land of the Lotus-Eaters</h3>
+          <p>Some of Odysseus' men eat the lotus flower and lose all desire to return home. They must be dragged back to the ships.</p>
+        </div>
+      </div>
+
+      <!-- Cyclops -->
+      <div class="encounter" id="cyclops">
+        <div class="location-marker">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="10" fill="#ff004d"/>
+            <circle cx="12" cy="10" r="2" fill="#181425"/>
+            <rect x="10" y="14" width="4" height="2" fill="#181425"/>
+          </svg>
+        </div>
+        <div class="text-bubble">
+          <h3>Polyphemus the Cyclops</h3>
+          <p>Trapped in the cave of the one-eyed giant, Odysseus blinds him with a wooden stake and escapes by hiding under sheep.</p>
+        </div>
+      </div>
+
+      <!-- Aeolus -->
+      <div class="encounter" id="aeolus">
+        <div class="location-marker">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <rect x="6" y="6" width="12" height="12" fill="#00e756"/>
+            <circle cx="12" cy="12" r="4" fill="#181425"/>
+            <rect x="10" y="8" width="4" height="8" fill="#00e756"/>
+          </svg>
+        </div>
+        <div class="text-bubble">
+          <h3>Aeolus, Keeper of the Winds</h3>
+          <p>Aeolus gives Odysseus a bag containing all the winds except the west wind. His men open it, blowing them off course.</p>
+        </div>
+      </div>
+
+      <!-- Laestrygonians -->
+      <div class="encounter" id="laestrygonians">
+        <div class="location-marker">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <rect x="4" y="4" width="16" height="16" fill="#ff004d"/>
+            <rect x="6" y="6" width="12" height="12" fill="#181425"/>
+            <rect x="8" y="8" width="8" height="8" fill="#ff004d"/>
+            <rect x="10" y="10" width="4" height="4" fill="#181425"/>
+          </svg>
+        </div>
+        <div class="text-bubble">
+          <h3>Land of the Laestrygonians</h3>
+          <p>Giant cannibals destroy all but one of Odysseus' ships. Only his own ship escapes the harbor.</p>
+        </div>
+      </div>
+
+      <!-- Circe -->
+      <div class="encounter" id="circe">
+        <div class="location-marker">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="10" fill="#29adff"/>
+            <circle cx="12" cy="10" r="2" fill="#181425"/>
+            <rect x="10" y="14" width="4" height="2" fill="#181425"/>
+            <rect x="8" y="16" width="8" height="2" fill="#29adff"/>
+          </svg>
+        </div>
+        <div class="text-bubble">
+          <h3>Circe the Enchantress</h3>
+          <p>Circe turns Odysseus' men into pigs. With Hermes' help, Odysseus resists her magic and frees his crew.</p>
+        </div>
+      </div>
+
+      <!-- Underworld -->
+      <div class="encounter" id="underworld">
+        <div class="location-marker">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <rect x="4" y="4" width="16" height="16" fill="#181425"/>
+            <rect x="6" y="6" width="12" height="12" fill="#ff004d"/>
+            <rect x="8" y="8" width="8" height="8" fill="#181425"/>
+            <rect x="10" y="10" width="4" height="4" fill="#ff004d"/>
+          </svg>
+        </div>
+        <div class="text-bubble">
+          <h3>Journey to the Underworld</h3>
+          <p>Odysseus consults the prophet Tiresias, who warns him of the challenges ahead and the suitors in his home.</p>
+        </div>
+      </div>
+
+      <!-- Sirens -->
+      <div class="encounter" id="sirens">
+        <div class="location-marker">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="10" fill="#29adff"/>
+            <circle cx="10" cy="10" r="2" fill="#181425"/>
+            <circle cx="14" cy="10" r="2" fill="#181425"/>
+            <rect x="10" y="14" width="4" height="2" fill="#181425"/>
+          </svg>
+        </div>
+        <div class="text-bubble">
+          <h3>The Sirens</h3>
+          <p>Odysseus has his men tie him to the mast to hear the Sirens' song while they plug their ears with wax.</p>
+        </div>
+      </div>
+
+      <!-- Scylla and Charybdis -->
+      <div class="encounter" id="scylla-charybdis">
+        <div class="location-marker">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <rect x="4" y="4" width="16" height="16" fill="#ff004d"/>
+            <rect x="6" y="6" width="12" height="12" fill="#181425"/>
+            <rect x="8" y="8" width="8" height="8" fill="#ff004d"/>
+            <rect x="10" y="10" width="4" height="4" fill="#181425"/>
+            <rect x="12" y="12" width="4" height="4" fill="#ff004d"/>
+          </svg>
+        </div>
+        <div class="text-bubble">
+          <h3>Scylla and Charybdis</h3>
+          <p>Between the six-headed monster Scylla and the whirlpool Charybdis, Odysseus loses six men but saves the rest.</p>
+        </div>
+      </div>
+
+      <!-- Cattle of the Sun -->
+      <div class="encounter" id="cattle-sun">
+        <div class="location-marker">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="10" fill="#00e756"/>
+            <circle cx="12" cy="12" r="6" fill="#181425"/>
+            <rect x="10" y="10" width="4" height="4" fill="#00e756"/>
+          </svg>
+        </div>
+        <div class="text-bubble">
+          <h3>Cattle of the Sun God</h3>
+          <p>Against Odysseus' warnings, his men slaughter Helios' sacred cattle. Zeus destroys their ship, leaving only Odysseus alive.</p>
+        </div>
+      </div>
+
+      <!-- Calypso -->
+      <div class="encounter" id="calypso">
+        <div class="location-marker">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="10" fill="#29adff"/>
+            <circle cx="12" cy="10" r="2" fill="#181425"/>
+            <rect x="10" y="14" width="4" height="2" fill="#181425"/>
+            <rect x="8" y="16" width="8" height="2" fill="#29adff"/>
+            <rect x="6" y="18" width="12" height="2" fill="#29adff"/>
+          </svg>
+        </div>
+        <div class="text-bubble">
+          <h3>Calypso's Island</h3>
+          <p>Odysseus is held captive for seven years by the nymph Calypso. Athena finally convinces Zeus to let him go home.</p>
+        </div>
+      </div>
+
+      <!-- Ithaca - Home -->
+      <div class="encounter" id="ithaca">
+        <div class="location-marker">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <rect x="4" y="4" width="16" height="16" fill="#00e756"/>
+            <rect x="6" y="6" width="12" height="12" fill="#181425"/>
+            <rect x="8" y="8" width="8" height="8" fill="#00e756"/>
+            <rect x="10" y="10" width="4" height="4" fill="#181425"/>
+            <rect x="12" y="12" width="4" height="4" fill="#00e756"/>
+          </svg>
+        </div>
+        <div class="text-bubble">
+          <h3>Ithaca - Home at Last</h3>
+          <p>After 20 years, Odysseus returns home disguised as a beggar. He slays the suitors and reunites with his wife Penelope.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</OdysseyLayout>
+
+<style>
+  .odyssey-container {
+    width: 100%;
+    height: 100vh;
+    overflow-x: auto;
+    overflow-y: hidden;
+    background: linear-gradient(90deg, #181425 0%, #1a1c2c 50%, #181425 100%);
+    position: relative;
+  }
+
+  .journey-track {
+    display: flex;
+    align-items: center;
+    min-width: 3000px;
+    height: 100%;
+    padding: 0;
+    position: relative;
+  }
+
+  .odysseus-character {
+    position: fixed;
+    left: 20px;
+    top: 65%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    transition: left 0.3s ease;
+  }
+
+  .encounter {
+    position: relative;
+    margin: 0 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 200px;
+  }
+
+  .location-marker {
+    margin-top: 20px;
+    z-index: 1;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+  }
+
+  .encounter:hover .location-marker,
+  .encounter.active .location-marker {
+    opacity: 1;
+  }
+
+  .text-bubble {
+    background: #181425;
+    border: 2px solid #00e756;
+    border-radius: 8px;
+    padding: 18px 28px;
+    min-width: 260px;
+    max-width: 340px;
+    text-align: center;
+    opacity: 0;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translate(-50%, -20px);
+    transition: all 0.3s ease;
+    box-shadow: 2px 2px 0 #1a1c2c;
+    z-index: 2;
+  }
+
+  .encounter:hover .text-bubble,
+  .encounter.active .text-bubble {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+
+  .text-bubble h3 {
+    color: #00e756;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 0.8rem;
+    margin: 0 0 10px 0;
+    letter-spacing: 0.04em;
+  }
+
+  .text-bubble p {
+    color: #fff1e8;
+    font-family: 'VT323', monospace;
+    font-size: 1rem;
+    line-height: 1.4;
+    margin: 0;
+  }
+
+  /* Scrollbar styling */
+  .odyssey-container::-webkit-scrollbar {
+    height: 12px;
+  }
+
+  .odyssey-container::-webkit-scrollbar-track {
+    background: #181425;
+  }
+
+  .odyssey-container::-webkit-scrollbar-thumb {
+    background: #00e756;
+    border-radius: 6px;
+  }
+
+  .odyssey-container::-webkit-scrollbar-thumb:hover {
+    background: #29adff;
+  }
+</style>
+
+<script>
+  // Update Odysseus position based on scroll
+  document.addEventListener('DOMContentLoaded', () => {
+    const container = document.querySelector('.odyssey-container');
+    const odysseus = document.querySelector('.odysseus-character');
+    const encounters = document.querySelectorAll('.encounter');
+
+    if (!container || !odysseus) return;
+
+    // Convert mouse wheel to horizontal scroll
+    container.addEventListener('wheel', (e) => {
+      e.preventDefault();
+      container.scrollLeft += e.deltaY;
+    });
+
+    container.addEventListener('scroll', () => {
+      const scrollLeft = container.scrollLeft;
+      const containerWidth = container.clientWidth;
+      const journeyWidth = container.scrollWidth; // Total journey width
+      
+      // Calculate Odysseus position
+      const scrollProgress = Math.min(scrollLeft / (journeyWidth - containerWidth), 1);
+      const minLeft = 50; // Start position
+      const maxLeft = containerWidth - 100; // End position (100px from right edge)
+      const odysseusLeft = minLeft + (scrollProgress * (maxLeft - minLeft));
+      odysseus.style.left = `${odysseusLeft}px`;
+
+      // Find the encounter closest to Odysseus
+      let closestEncounter = null;
+      let closestDistance = Infinity;
+      encounters.forEach(encounter => {
+        const rect = encounter.getBoundingClientRect();
+        // Get the center of the encounter relative to the viewport
+        const encounterCenter = rect.left + rect.width / 2;
+        // Odysseus's center relative to the viewport
+        const odysseusRect = odysseus.getBoundingClientRect();
+        const odysseusCenter = odysseusRect.left + odysseusRect.width / 2;
+        const distance = Math.abs(encounterCenter - odysseusCenter);
+        if (distance < closestDistance) {
+          closestDistance = distance;
+          closestEncounter = encounter;
+        }
+      });
+      // Set only the closest encounter as active
+      encounters.forEach(encounter => {
+        if (encounter === closestEncounter) {
+          encounter.classList.add('active');
+        } else {
+          encounter.classList.remove('active');
+        }
+      });
+    });
+  });
+</script> 
