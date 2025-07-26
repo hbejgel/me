@@ -16,6 +16,17 @@ import OdysseyLayout from '../layouts/OdysseyLayout.astro';
       <div class="wave"></div>
       <div class="foam"></div>
     </div>
+    <!-- Swimming Men Animation -->
+    <div class="swimming-men" id="swimming-men">
+      <div class="swimmer"></div>
+      <div class="swimmer"></div>
+      <div class="swimmer"></div>
+      <div class="swimmer"></div>
+      <div class="splash"></div>
+      <div class="splash"></div>
+      <div class="splash"></div>
+      <div class="splash"></div>
+    </div>
     <div class="journey-track">
       <!-- Odysseus Character -->
       <div class="odysseus-character">       
@@ -338,6 +349,113 @@ import OdysseyLayout from '../layouts/OdysseyLayout.astro';
     }
   }
 
+  /* Swimming Men Animation */
+  .swimming-men {
+    position: absolute;
+    bottom: 25%;
+    left: 17%;
+    width: 100%;
+    height: 60px;
+    pointer-events: none;
+    z-index: 5;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+
+  .swimming-men.active {
+    opacity: 1;
+  }
+
+  .swimmer {
+    position: absolute;
+    bottom: 0;
+    width: 12px;
+    height: 8px;
+    background: #8B4513;
+    border-radius: 50% 50% 0 0;
+    animation: swim 5s ease-in-out infinite;
+  }
+
+  .swimmer:nth-child(1) {
+    left: 15%;
+    animation-delay: 0s;
+  }
+
+  .swimmer:nth-child(2) {
+    left: 18%;
+    animation-delay: 0.5s;
+  }
+
+  .swimmer:nth-child(3) {
+    left: 21%;
+    animation-delay: 1s;
+  }
+
+  .swimmer:nth-child(4) {
+    left: 24%;
+    animation-delay: 1.5s;
+  }
+
+  @keyframes swim {
+    0% {
+      transform: translateY(0) translateX(0);
+    }
+    25% {
+      transform: translateY(-65px) translateX(10px);
+    }
+    50% {
+      transform: translateY(-130px) translateX(0px);
+    }
+    75% {
+      transform: translateY(-195px) translateX(10px);
+    }
+    100% {
+      transform: translateY(-260px) translateX(0);
+    }
+  }
+
+  /* Splash effects */
+  .splash {
+    position: absolute;
+    bottom: 0;
+    width: 8px;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    animation: splash-effect 1s ease-out infinite;
+  }
+
+  .splash:nth-child(5) {
+    left: 16%;
+    animation-delay: 0.2s;
+  }
+
+  .splash:nth-child(6) {
+    left: 19%;
+    animation-delay: 0.7s;
+  }
+
+  .splash:nth-child(7) {
+    left: 22%;
+    animation-delay: 1.2s;
+  }
+
+  .splash:nth-child(8) {
+    left: 25%;
+    animation-delay: 1.7s;
+  }
+
+  @keyframes splash-effect {
+    0% {
+      transform: scale(0);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(2);
+      opacity: 0;
+    }
+  }
+
   .journey-track {
     display: flex;
     align-items: center;
@@ -463,6 +581,7 @@ import OdysseyLayout from '../layouts/OdysseyLayout.astro';
     const container = document.querySelector('.odyssey-container');
     const odysseus = document.querySelector('.odysseus-character');
     const encounters = document.querySelectorAll('.encounter');
+    const swimmingMen = document.querySelector('#swimming-men');
 
     if (!container || !odysseus) return;
 
@@ -508,6 +627,17 @@ import OdysseyLayout from '../layouts/OdysseyLayout.astro';
           encounter.classList.remove('active');
         }
       });
+      
+      // Trigger swimming animation when Odysseus reaches lotus-eaters
+      if (closestEncounter && closestEncounter.id === 'lotus-eaters') {
+        if (swimmingMen) {
+          swimmingMen.classList.add('active');
+        }
+      } else {
+        if (swimmingMen) {
+          swimmingMen.classList.remove('active');
+        }
+      }
     });
   });
 </script> 
