@@ -6,20 +6,39 @@ import OdysseyLayout from '../layouts/OdysseyLayout.astro';
   <div class="odyssey-container">
     <div class="journey-track">
       <!-- Odysseus Character -->
-      <div class="odysseus-character">
-        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="32" height="32" fill="none"/>
-          <!-- Simple pixel art Odysseus -->
-          <rect x="12" y="8" width="8" height="4" fill="#00e756"/> <!-- helmet -->
-          <rect x="10" y="12" width="12" height="8" fill="#00e756"/> <!-- body -->
-          <rect x="8" y="20" width="4" height="8" fill="#00e756"/> <!-- left arm -->
-          <rect x="20" y="20" width="4" height="8" fill="#00e756"/> <!-- right arm -->
-          <rect x="12" y="20" width="8" height="8" fill="#00e756"/> <!-- legs -->
-        </svg>
+      <div class="odysseus-character">       
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="64" height="64">
+            <path d="M0 0 C1.32 0 2.64 0 4 0 C4.05607422 1.37285156 4.05607422 1.37285156 4.11328125 2.7734375 C4.21189453 4.55621094 4.21189453 4.55621094 4.3125 6.375 C4.37050781 7.55835938 4.42851563 8.74171875 4.48828125 9.9609375 C4.74158203 11.46527344 4.74158203 11.46527344 5 13 C5.99 13.66 6.98 14.32 8 15 C8.88099986 20.79754745 8.33125181 26.60898018 6 32 C12.190167 30.64301124 12.190167 30.64301124 16.625 26.5625 C17.00815445 23.94427793 16.66862505 22.50734392 16 20 C16.66 19.01 17.32 18.02 18 17 C19.32 17.33 20.64 17.66 22 18 C21.01 18.99 20.02 19.98 19 21 C19.66 21.99 20.32 22.98 21 24 C20.79508716 29.94247248 19.40095986 37.59904014 15 42 C17.31 42.66 19.62 43.32 22 44 C20 46 20 46 18.12704468 46.24050903 C16.98787094 46.2338472 16.98787094 46.2338472 15.82568359 46.22705078 C14.53457169 46.22682419 14.53457169 46.22682419 13.21737671 46.22659302 C12.28712677 46.21627045 11.35687683 46.20594788 10.3984375 46.1953125 C9.44683746 46.1924826 8.49523743 46.18965271 7.51480103 46.18673706 C4.46807408 46.17551989 1.42163846 46.15041263 -1.625 46.125 C-3.68749576 46.11497218 -5.74999612 46.10584599 -7.8125 46.09765625 C-12.87511267 46.07557554 -17.9375069 46.0410353 -23 46 C-23.33 45.34 -23.66 44.68 -24 44 C-22.02 43.505 -22.02 43.505 -20 43 C-20.16371094 42.48953125 -20.32742187 41.9790625 -20.49609375 41.453125 C-21.16698481 38.18708172 -21.0933456 35.0813253 -21.0625 31.75 C-21.05347656 30.48671875 -21.04445313 29.2234375 -21.03515625 27.921875 C-21.02355469 26.95765625 -21.01195312 25.9934375 -21 25 C-23.38564077 25.57584432 -25.66682784 26.22227595 -28 27 C-27.375 25.125 -27.375 25.125 -26 23 C-22.875 21.75 -22.875 21.75 -20 21 C-17.02449969 24.0684847 -16.03525487 25.46236331 -15.75 29.8125 C-15.8325 30.864375 -15.915 31.91625 -16 33 C-15.34 33 -14.68 33 -14 33 C-13.93683594 32.01 -13.87367187 31.02 -13.80859375 30 C-13.18633473 22.63815416 -12.43219949 16.63662655 -6.88671875 11.25390625 C-4.18222603 9.45651047 -2.14106756 9.38710877 1 10 C1.33 9.34 1.66 8.68 2 8 C1.2575 7.87625 0.515 7.7525 -0.25 7.625 C-2.80141485 7.04513299 -4.7267573 6.26291261 -7 5 C-6.030625 4.360625 -5.06125 3.72125 -4.0625 3.0625 C-1.23963731 1.3034741 -1.23963731 1.3034741 0 0 Z M-13 32 C-13 32.66 -13 33.32 -13 34 C-10.87527424 34.05386629 -8.75016348 34.09273071 -6.625 34.125 C-4.84996094 34.15980469 -4.84996094 34.15980469 -3.0390625 34.1953125 C0.11153817 34.32866229 0.11153817 34.32866229 2 32 C-3.9589999 30.11821056 -7.14210361 29.80328885 -13 32 Z " fill="#562F23" transform="translate(34,9)"/>
+            <path d="M0 0 C1.32 0 2.64 0 4 0 C4.03738281 0.91523438 4.07476562 1.83046875 4.11328125 2.7734375 C4.21189453 4.55621094 4.21189453 4.55621094 4.3125 6.375 C4.37050781 7.55835938 4.42851563 8.74171875 4.48828125 9.9609375 C4.65714844 10.96382812 4.82601562 11.96671875 5 13 C5.99 13.66 6.98 14.32 8 15 C9.17343718 21.83354592 7.80976302 27.79510665 5 34 C3.35 34 1.7 34 0 34 C0 33.34 0 32.68 0 32 C-4.61588935 30.986756 -8.37072828 31.00152963 -13 32 C-13.33 32.66 -13.66 33.32 -14 34 C-12.99238476 17.0556131 -12.99238476 17.0556131 -6.88671875 11.21875 C-4.17532316 9.46728949 -2.12428479 9.39038346 1 10 C1.33 9.34 1.66 8.68 2 8 C1.2575 7.87625 0.515 7.7525 -0.25 7.625 C-2.80141485 7.04513299 -4.7267573 6.26291261 -7 5 C-6.030625 4.360625 -5.06125 3.72125 -4.0625 3.0625 C-1.23963731 1.3034741 -1.23963731 1.3034741 0 0 Z " fill="#613627" transform="translate(34,9)"/>
+            <path d="M0 0 C2.75 1 2.75 1 4.75 3 C4.98046875 5.96875 4.98046875 5.96875 4.9375 9.5 C4.93105469 10.6653125 4.92460938 11.830625 4.91796875 13.03125 C4.75 16 4.75 16 3.75 18 C1.95741442 17.91306859 0.16584856 17.80489496 -1.625 17.6875 C-2.62273438 17.62949219 -3.62046875 17.57148437 -4.6484375 17.51171875 C-5.50695312 17.34285156 -6.36546875 17.17398438 -7.25 17 C-9.35853254 13.83720118 -9.7932467 11.85558683 -9.6953125 8.078125 C-9.00643007 4.86334033 -7.41256864 3.12615599 -4.9765625 0.99609375 C-3.25 0 -3.25 0 0 0 Z " fill="#CFBE9A" transform="translate(32.25,19)"/>
+            <path d="M0 0 C0.66 0.33 1.32 0.66 2 1 C-0.85915984 6.71831968 -3.99569328 8.21812218 -9.953125 10.3359375 C-10.96632813 10.66464844 -10.96632813 10.66464844 -12 11 C-12 11.66 -12 12.32 -12 13 C-14.45840605 13.02691685 -16.91651882 13.04679802 -19.375 13.0625 C-20.07367188 13.07087891 -20.77234375 13.07925781 -21.4921875 13.08789062 C-26.7734375 13.11328125 -26.7734375 13.11328125 -29 12 C-29.33 11.67 -29.66 11.34 -30 11 C-30.639375 10.731875 -31.27875 10.46375 -31.9375 10.1875 C-34.40711364 8.76560124 -34.85031307 7.54168456 -36 5 C-34.94256592 5.0314209 -34.94256592 5.0314209 -33.86376953 5.06347656 C-30.61766269 5.14748719 -27.37178561 5.19892697 -24.125 5.25 C-23.01640625 5.28351562 -21.9078125 5.31703125 -20.765625 5.3515625 C-13.37853776 5.43846941 -7.57349624 4.47418516 -1 1 C-0.67 0.67 -0.34 0.34 0 0 Z " fill="#764631" transform="translate(50,37)"/>
+            <path d="M0 0 C2.48113111 0.05707862 4.96376794 0.06207354 7.4453125 0.02734375 C8.86588307 0.01470713 10.2864561 0.00234548 11.70703125 -0.00976562 C13.92342001 -0.03463291 16.13967725 -0.06272005 18.35595703 -0.09594727 C20.51075062 -0.12617245 22.6653745 -0.14392027 24.8203125 -0.16015625 C26.10180176 -0.17699463 27.38329102 -0.19383301 28.70361328 -0.21118164 C31.7842532 -0.01382173 33.43505155 0.36309947 36 2 C33.69179492 3.15410254 32.39215724 3.1210297 29.82568359 3.11352539 C28.53457169 3.11341209 28.53457169 3.11341209 27.21737671 3.11329651 C26.28712677 3.10813522 25.35687683 3.10297394 24.3984375 3.09765625 C23.44683746 3.0962413 22.49523743 3.09482635 21.51480103 3.09336853 C18.46816903 3.08776012 15.42160987 3.07520619 12.375 3.0625 C10.31250106 3.05748608 8.25000097 3.05292299 6.1875 3.04882812 C1.12497183 3.03778796 -3.93750173 3.02051767 -9 3 C-9.33 2.34 -9.66 1.68 -10 1 C-6.32871439 -1.40045598 -4.20071825 -0.70960168 0 0 Z " fill="#5B6974" transform="translate(20,52)"/>
+            <path d="M0 0 C1.2065625 0.0309375 1.2065625 0.0309375 2.4375 0.0625 C2.4375 0.7225 2.4375 1.3825 2.4375 2.0625 C3.4275 1.7325 4.4175 1.4025 5.4375 1.0625 C5.4375 4.3625 5.4375 7.6625 5.4375 11.0625 C2.31459365 10.57671457 -0.55830359 10.0638988 -3.5625 9.0625 C-3.5625 7.7425 -3.5625 6.4225 -3.5625 5.0625 C-4.2225 5.0625 -4.8825 5.0625 -5.5625 5.0625 C-3.15007962 0.07683121 -3.15007962 0.07683121 0 0 Z " fill="#ECE1C2" transform="translate(31.5625,20.9375)"/>
+            <path d="M0 0 C0.66 0.33 1.32 0.66 2 1 C1.979375 1.763125 1.95875 2.52625 1.9375 3.3125 C1.87057159 6.10185786 1.87057159 6.10185786 3 9 C6.63 9.33 10.26 9.66 14 10 C14.33 9.34 14.66 8.68 15 8 C14.67 9.98 14.34 11.96 14 14 C12.824375 13.814375 11.64875 13.62875 10.4375 13.4375 C6.45170309 12.94104843 2.94620282 13.11411774 -1 14 C-1.33 14.66 -1.66 15.32 -2 16 C-1.34 10.72 -0.68 5.44 0 0 Z " fill="#B79C77" transform="translate(22,27)"/>
+            <path d="M0 0 C1.875 1.3125 1.875 1.3125 3.875 4.3125 C4.13260279 7.00702521 3.96400053 9.59798375 3.875 12.3125 C2.885 12.6425 1.895 12.9725 0.875 13.3125 C0.875 13.9725 0.875 14.6325 0.875 15.3125 C0.215 15.3125 -0.445 15.3125 -1.125 15.3125 C-1.125 11.3525 -1.125 7.3925 -1.125 3.3125 C-4.98438975 4.22302075 -4.98438975 4.22302075 -8.125 5.3125 C-7.14358061 2.85895152 -6.40254408 1.51603232 -4.25 -0.0625 C-2.125 -0.6875 -2.125 -0.6875 0 0 Z " fill="#542D22" transform="translate(14.125,30.6875)"/>
+            <path d="M0 0 C1.32 0.33 2.64 0.66 4 1 C4.3690205 12.52164009 4.3690205 12.52164009 2 18 C1.34 18 0.68 18 0 18 C0 12.06 0 6.12 0 0 Z " fill="#D3C1A1" transform="translate(38,23)"/>
+            <path d="M0 0 C1.32 0.33 2.64 0.66 4 1 C2.515 2.485 2.515 2.485 1 4 C1.99 5.485 1.99 5.485 3 7 C3 8.32 3 9.64 3 11 C2.34 11 1.68 11 1 11 C0.34 13.64 -0.32 16.28 -1 19 C-1.66 19 -2.32 19 -3 19 C-3.20086443 15.28400809 -3.1519437 14.22791555 -1 11 C-1.04820409 9.02975444 -1.04820409 9.02975444 -1.5 7 C-2.19865005 3.45300743 -2.17869629 3.26804444 0 0 Z " fill="#5C3324" transform="translate(52,26)"/>
+            <path d="M0 0 C2.125 0.375 2.125 0.375 4 1 C3.67 3.31 3.34 5.62 3 8 C-0.85645121 8.22036864 -3.49223216 7.60355101 -7 6 C-6.21625 5.38125 -5.4325 4.7625 -4.625 4.125 C-2.03162353 2.10141339 -2.03162353 2.10141339 0 0 Z " fill="#AE5547" transform="translate(34,9)"/>
+            <path d="M0 0 C5.61 0.33 11.22 0.66 17 1 C17 1.66 17 2.32 17 3 C14.54159395 3.02691685 12.08348118 3.04679802 9.625 3.0625 C8.92632812 3.07087891 8.22765625 3.07925781 7.5078125 3.08789062 C2.2265625 3.11328125 2.2265625 3.11328125 0 2 C0 1.34 0 0.68 0 0 Z " fill="#70422E" transform="translate(21,47)"/>
+            <path d="M0 0 C0 0.99 0 1.98 0 3 C-4.455 3.495 -4.455 3.495 -9 4 C-9 3.34 -9 2.68 -9 2 C-12.63 2 -16.26 2 -20 2 C-20 1.67 -20 1.34 -20 1 C-6.3667426 -0.14806378 -6.3667426 -0.14806378 0 0 Z " fill="#5E3526" transform="translate(47,46)"/>
+            <path d="M0 0 C0.66 0.33 1.32 0.66 2 1 C2 2.65 2 4.3 2 6 C2.56203125 5.64164063 3.1240625 5.28328125 3.703125 4.9140625 C6.65612025 3.73889092 7.82518391 4.25668796 10.75 5.375 C11.54921875 5.67148437 12.3484375 5.96796875 13.171875 6.2734375 C13.77515625 6.51320313 14.3784375 6.75296875 15 7 C13 8 13 8 10.3125 7.5 C6.59329548 6.93861064 3.66724179 7.20902628 0 8 C-0.33 8.66 -0.66 9.32 -1 10 C-0.67 6.7 -0.34 3.4 0 0 Z " fill="#9A735C" transform="translate(21,33)"/>
+            <path d="M0 0 C1.07765625 0.29648437 2.1553125 0.59296875 3.265625 0.8984375 C4.08546875 1.13820312 4.9053125 1.37796875 5.75 1.625 C5.75 1.955 5.75 2.285 5.75 2.625 C0.8 2.625 -4.15 2.625 -9.25 2.625 C-9.58 1.965 -9.91 1.305 -10.25 0.625 C-6.5169539 -1.89390004 -4.20376097 -1.1880194 0 0 Z " fill="#8CA1A8" transform="translate(20.25,52.375)"/>
+            <path d="M0 0 C1.37351794 3.12163168 0.89111525 4.33811581 -0.1875 7.6875 C-2 11 -2 11 -4.1875 11.9375 C-4.785625 11.958125 -5.38375 11.97875 -6 12 C-6.99 10.68 -7.98 9.36 -9 8 C-7.35 7.34 -5.7 6.68 -4 6 C-3.67 6.33 -3.34 6.66 -3 7 C-2.34 6.67 -1.68 6.34 -1 6 C-1.33 5.01 -1.66 4.02 -2 3 C-1.34 2.01 -0.68 1.02 0 0 Z " fill="#45221C" transform="translate(53,37)"/>
+            <path d="M0 0 C3.18666175 0.27953173 4.91798366 0.62000954 7.5625 2.3125 C4.79797967 3.69476016 2.5163637 3.40775387 -0.5625 3.375 C-1.65820312 3.36597656 -2.75390625 3.35695312 -3.8828125 3.34765625 C-5.14738281 3.33025391 -5.14738281 3.33025391 -6.4375 3.3125 C-4.13464528 0.65966736 -3.72314367 0.33846761 0 0 Z " fill="#8CA1A8" transform="translate(48.4375,51.6875)"/>
+            <path d="M0 0 C2.86319855 1.04983947 3.8499428 1.73398952 5.375 4.4375 C5.684375 5.7059375 5.684375 5.7059375 6 7 C5.01 8.485 5.01 8.485 4 10 C3.566875 8.2984375 3.566875 8.2984375 3.125 6.5625 C2.75375 5.386875 2.3825 4.21125 2 3 C1.34 2.67 0.68 2.34 0 2 C0 1.34 0 0.68 0 0 Z " fill="#764631" transform="translate(12,30)"/>
+            <path d="M0 0 C1.32 0.33 2.64 0.66 4 1 C3.67 1.99 3.34 2.98 3 4 C0.69 4.33 -1.62 4.66 -4 5 C-2.68 3.35 -1.36 1.7 0 0 Z " fill="#CC8159" transform="translate(34,9)"/>
+            <path d="M0 0 C1.65 0.33 3.3 0.66 5 1 C4.1875 3.4375 4.1875 3.4375 3 6 C2.01 6.33 1.02 6.66 0 7 C-1.125 2.25 -1.125 2.25 0 0 Z " fill="#48241C" transform="translate(14,44)"/>
+            <path d="M0 0 C0.66 0.33 1.32 0.66 2 1 C2 3.31 2 5.62 2 8 C1.34 8 0.68 8 0 8 C-0.33 8.66 -0.66 9.32 -1 10 C-0.67 6.7 -0.34 3.4 0 0 Z " fill="#A27D66" transform="translate(21,33)"/>
+            <path d="M0 0 C0.33 0.99 0.66 1.98 1 3 C1.66 3 2.32 3 3 3 C2.67 4.32 2.34 5.64 2 7 C2 6.34 2 5.68 2 5 C0.68 4.67 -0.64 4.34 -2 4 C-1.34 2.68 -0.68 1.36 0 0 Z " fill="#D9CBA8" transform="translate(25,23)"/>
+            </svg>
       </div>
 
       <!-- Troy - Starting Point -->
       <div class="encounter" id="troy">
+        <div class="text-bubble">
+          <h3>Troy</h3>
+          <p>After 10 years of war, Troy falls. Odysseus begins his journey home to Ithaca, but the gods have other plans...</p>
+        </div>
         <div class="location-marker">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
             <rect x="4" y="4" width="16" height="16" fill="#ff004d"/>
@@ -27,28 +46,28 @@ import OdysseyLayout from '../layouts/OdysseyLayout.astro';
             <rect x="8" y="8" width="8" height="8" fill="#ff004d"/>
           </svg>
         </div>
-        <div class="text-bubble">
-          <h3>Troy</h3>
-          <p>After 10 years of war, Troy falls. Odysseus begins his journey home to Ithaca, but the gods have other plans...</p>
-        </div>
       </div>
 
       <!-- Lotus-Eaters -->
       <div class="encounter" id="lotus-eaters">
+        <div class="text-bubble">
+          <h3>Land of the Lotus-Eaters</h3>
+          <p>Some of Odysseus' men eat the lotus flower and lose all desire to return home. They must be dragged back to the ships.</p>
+        </div>
         <div class="location-marker">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
             <circle cx="12" cy="12" r="8" fill="#29adff"/>
             <circle cx="12" cy="12" r="4" fill="#181425"/>
           </svg>
         </div>
-        <div class="text-bubble">
-          <h3>Land of the Lotus-Eaters</h3>
-          <p>Some of Odysseus' men eat the lotus flower and lose all desire to return home. They must be dragged back to the ships.</p>
-        </div>
       </div>
 
       <!-- Cyclops -->
       <div class="encounter" id="cyclops">
+        <div class="text-bubble">
+          <h3>Polyphemus the Cyclops</h3>
+          <p>Trapped in the cave of the one-eyed giant, Odysseus blinds him with a wooden stake and escapes by hiding under sheep.</p>
+        </div>
         <div class="location-marker">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
             <circle cx="12" cy="12" r="10" fill="#ff004d"/>
@@ -56,14 +75,14 @@ import OdysseyLayout from '../layouts/OdysseyLayout.astro';
             <rect x="10" y="14" width="4" height="2" fill="#181425"/>
           </svg>
         </div>
-        <div class="text-bubble">
-          <h3>Polyphemus the Cyclops</h3>
-          <p>Trapped in the cave of the one-eyed giant, Odysseus blinds him with a wooden stake and escapes by hiding under sheep.</p>
-        </div>
       </div>
 
       <!-- Aeolus -->
       <div class="encounter" id="aeolus">
+        <div class="text-bubble">
+          <h3>Aeolus, Keeper of the Winds</h3>
+          <p>Aeolus gives Odysseus a bag containing all the winds except the west wind. His men open it, blowing them off course.</p>
+        </div>
         <div class="location-marker">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
             <rect x="6" y="6" width="12" height="12" fill="#00e756"/>
@@ -71,14 +90,14 @@ import OdysseyLayout from '../layouts/OdysseyLayout.astro';
             <rect x="10" y="8" width="4" height="8" fill="#00e756"/>
           </svg>
         </div>
-        <div class="text-bubble">
-          <h3>Aeolus, Keeper of the Winds</h3>
-          <p>Aeolus gives Odysseus a bag containing all the winds except the west wind. His men open it, blowing them off course.</p>
-        </div>
       </div>
 
       <!-- Laestrygonians -->
       <div class="encounter" id="laestrygonians">
+        <div class="text-bubble">
+          <h3>Land of the Laestrygonians</h3>
+          <p>Giant cannibals destroy all but one of Odysseus' ships. Only his own ship escapes the harbor.</p>
+        </div>
         <div class="location-marker">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
             <rect x="4" y="4" width="16" height="16" fill="#ff004d"/>
@@ -87,14 +106,14 @@ import OdysseyLayout from '../layouts/OdysseyLayout.astro';
             <rect x="10" y="10" width="4" height="4" fill="#181425"/>
           </svg>
         </div>
-        <div class="text-bubble">
-          <h3>Land of the Laestrygonians</h3>
-          <p>Giant cannibals destroy all but one of Odysseus' ships. Only his own ship escapes the harbor.</p>
-        </div>
       </div>
 
       <!-- Circe -->
       <div class="encounter" id="circe">
+        <div class="text-bubble">
+          <h3>Circe the Enchantress</h3>
+          <p>Circe turns Odysseus' men into pigs. With Hermes' help, Odysseus resists her magic and frees his crew.</p>
+        </div>
         <div class="location-marker">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
             <circle cx="12" cy="12" r="10" fill="#29adff"/>
@@ -103,14 +122,14 @@ import OdysseyLayout from '../layouts/OdysseyLayout.astro';
             <rect x="8" y="16" width="8" height="2" fill="#29adff"/>
           </svg>
         </div>
-        <div class="text-bubble">
-          <h3>Circe the Enchantress</h3>
-          <p>Circe turns Odysseus' men into pigs. With Hermes' help, Odysseus resists her magic and frees his crew.</p>
-        </div>
       </div>
 
       <!-- Underworld -->
       <div class="encounter" id="underworld">
+        <div class="text-bubble">
+          <h3>Journey to the Underworld</h3>
+          <p>Odysseus consults the prophet Tiresias, who warns him of the challenges ahead and the suitors in his home.</p>
+        </div>
         <div class="location-marker">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
             <rect x="4" y="4" width="16" height="16" fill="#181425"/>
@@ -119,14 +138,14 @@ import OdysseyLayout from '../layouts/OdysseyLayout.astro';
             <rect x="10" y="10" width="4" height="4" fill="#ff004d"/>
           </svg>
         </div>
-        <div class="text-bubble">
-          <h3>Journey to the Underworld</h3>
-          <p>Odysseus consults the prophet Tiresias, who warns him of the challenges ahead and the suitors in his home.</p>
-        </div>
       </div>
 
       <!-- Sirens -->
       <div class="encounter" id="sirens">
+        <div class="text-bubble">
+          <h3>The Sirens</h3>
+          <p>Odysseus has his men tie him to the mast to hear the Sirens' song while they plug their ears with wax.</p>
+        </div>
         <div class="location-marker">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
             <circle cx="12" cy="12" r="10" fill="#29adff"/>
@@ -135,14 +154,14 @@ import OdysseyLayout from '../layouts/OdysseyLayout.astro';
             <rect x="10" y="14" width="4" height="2" fill="#181425"/>
           </svg>
         </div>
-        <div class="text-bubble">
-          <h3>The Sirens</h3>
-          <p>Odysseus has his men tie him to the mast to hear the Sirens' song while they plug their ears with wax.</p>
-        </div>
       </div>
 
       <!-- Scylla and Charybdis -->
       <div class="encounter" id="scylla-charybdis">
+        <div class="text-bubble">
+          <h3>Scylla and Charybdis</h3>
+          <p>Between the six-headed monster Scylla and the whirlpool Charybdis, Odysseus loses six men but saves the rest.</p>
+        </div>
         <div class="location-marker">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
             <rect x="4" y="4" width="16" height="16" fill="#ff004d"/>
@@ -152,14 +171,14 @@ import OdysseyLayout from '../layouts/OdysseyLayout.astro';
             <rect x="12" y="12" width="4" height="4" fill="#ff004d"/>
           </svg>
         </div>
-        <div class="text-bubble">
-          <h3>Scylla and Charybdis</h3>
-          <p>Between the six-headed monster Scylla and the whirlpool Charybdis, Odysseus loses six men but saves the rest.</p>
-        </div>
       </div>
 
       <!-- Cattle of the Sun -->
       <div class="encounter" id="cattle-sun">
+        <div class="text-bubble">
+          <h3>Cattle of the Sun God</h3>
+          <p>Against Odysseus' warnings, his men slaughter Helios' sacred cattle. Zeus destroys their ship, leaving only Odysseus alive.</p>
+        </div>
         <div class="location-marker">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
             <circle cx="12" cy="12" r="10" fill="#00e756"/>
@@ -167,14 +186,14 @@ import OdysseyLayout from '../layouts/OdysseyLayout.astro';
             <rect x="10" y="10" width="4" height="4" fill="#00e756"/>
           </svg>
         </div>
-        <div class="text-bubble">
-          <h3>Cattle of the Sun God</h3>
-          <p>Against Odysseus' warnings, his men slaughter Helios' sacred cattle. Zeus destroys their ship, leaving only Odysseus alive.</p>
-        </div>
       </div>
 
       <!-- Calypso -->
       <div class="encounter" id="calypso">
+        <div class="text-bubble">
+          <h3>Calypso's Island</h3>
+          <p>Odysseus is held captive for seven years by the nymph Calypso. Athena finally convinces Zeus to let him go home.</p>
+        </div>
         <div class="location-marker">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
             <circle cx="12" cy="12" r="10" fill="#29adff"/>
@@ -184,14 +203,14 @@ import OdysseyLayout from '../layouts/OdysseyLayout.astro';
             <rect x="6" y="18" width="12" height="2" fill="#29adff"/>
           </svg>
         </div>
-        <div class="text-bubble">
-          <h3>Calypso's Island</h3>
-          <p>Odysseus is held captive for seven years by the nymph Calypso. Athena finally convinces Zeus to let him go home.</p>
-        </div>
       </div>
 
       <!-- Ithaca - Home -->
       <div class="encounter" id="ithaca">
+        <div class="text-bubble">
+          <h3>Ithaca - Home at Last</h3>
+          <p>After 20 years, Odysseus returns home disguised as a beggar. He slays the suitors and reunites with his wife Penelope.</p>
+        </div>
         <div class="location-marker">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
             <rect x="4" y="4" width="16" height="16" fill="#00e756"/>
@@ -200,10 +219,6 @@ import OdysseyLayout from '../layouts/OdysseyLayout.astro';
             <rect x="10" y="10" width="4" height="4" fill="#181425"/>
             <rect x="12" y="12" width="4" height="4" fill="#00e756"/>
           </svg>
-        </div>
-        <div class="text-bubble">
-          <h3>Ithaca - Home at Last</h3>
-          <p>After 20 years, Odysseus returns home disguised as a beggar. He slays the suitors and reunites with his wife Penelope.</p>
         </div>
       </div>
     </div>
@@ -216,8 +231,18 @@ import OdysseyLayout from '../layouts/OdysseyLayout.astro';
     height: 100vh;
     overflow-x: auto;
     overflow-y: hidden;
-    background: linear-gradient(90deg, #181425 0%, #1a1c2c 50%, #181425 100%);
+    background: linear-gradient(90deg, #2C1810 0%, #8B4513 20%, #D2691E 50%, #8B4513 80%, #2C1810 100%);
     position: relative;
+    /* Greek pattern overlay */
+    background-image: 
+      linear-gradient(90deg, #2C1810 0%, #8B4513 20%, #D2691E 50%, #8B4513 80%, #2C1810 100%),
+      repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 10px,
+        rgba(255, 255, 255, 0.03) 10px,
+        rgba(255, 255, 255, 0.03) 20px
+      );
   }
 
   .journey-track {
@@ -245,58 +270,74 @@ import OdysseyLayout from '../layouts/OdysseyLayout.astro';
     flex-direction: column;
     align-items: center;
     min-width: 200px;
+    top:-10%
   }
 
   .location-marker {
-    margin-top: 20px;
+    margin-top: 8px;
     z-index: 1;
-    opacity: 0.7;
+    opacity: 0.9;
     transition: opacity 0.3s ease;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
   }
 
   .encounter:hover .location-marker,
   .encounter.active .location-marker {
     opacity: 1;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
   }
 
   .text-bubble {
-    background: #181425;
-    border: 2px solid #00e756;
+    background: linear-gradient(135deg, #F5F5DC 0%, #DEB887 100%);
+    border: 3px solid #8B4513;
     border-radius: 8px;
     padding: 18px 28px;
     min-width: 260px;
     max-width: 340px;
     text-align: center;
     opacity: 0;
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    transform: translate(-50%, -20px);
+    margin-bottom: 18px;
     transition: all 0.3s ease;
-    box-shadow: 2px 2px 0 #1a1c2c;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     z-index: 2;
+    position: relative;
+  }
+
+  .text-bubble::before {
+    content: '';
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 12px solid #8B4513;
   }
 
   .encounter:hover .text-bubble,
   .encounter.active .text-bubble {
     opacity: 1;
-    transform: translate(-50%, 0);
   }
 
   .text-bubble h3 {
-    color: #00e756;
-    font-family: 'Press Start 2P', monospace;
+    color: #8B4513;
+    font-family: 'Cinzel', 'Times New Roman', serif;
     font-size: 0.8rem;
     margin: 0 0 10px 0;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.02em;
+    font-weight: 700;
+    text-transform: uppercase;
   }
 
   .text-bubble p {
-    color: #fff1e8;
-    font-family: 'VT323', monospace;
+    color: #2C1810;
+    font-family: 'Crimson Text', 'Times New Roman', serif;
     font-size: 1rem;
     line-height: 1.4;
     margin: 0;
+    font-style: italic;
   }
 
   /* Scrollbar styling */
@@ -305,18 +346,20 @@ import OdysseyLayout from '../layouts/OdysseyLayout.astro';
   }
 
   .odyssey-container::-webkit-scrollbar-track {
-    background: #181425;
+    background: #2C1810;
   }
 
   .odyssey-container::-webkit-scrollbar-thumb {
-    background: #00e756;
+    background: linear-gradient(90deg, #8B4513, #D2691E);
     border-radius: 6px;
   }
 
   .odyssey-container::-webkit-scrollbar-thumb:hover {
-    background: #29adff;
+    background: linear-gradient(90deg, #D2691E, #CD853F);
   }
 </style>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Crimson+Text:ital,wght@0,400;1,400&display=swap" rel="stylesheet" />
 
 <script>
   // Update Odysseus position based on scroll
