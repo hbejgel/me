@@ -4,6 +4,13 @@ import OdysseyLayout from '../layouts/OdysseyLayout.astro';
 
 <OdysseyLayout>
   <div class="odyssey-container">
+    <!-- Water/Wave Effects -->
+    <div class="water-layer">
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="foam"></div>
+    </div>
     <div class="journey-track">
       <!-- Odysseus Character -->
       <div class="odysseus-character">       
@@ -245,6 +252,74 @@ import OdysseyLayout from '../layouts/OdysseyLayout.astro';
       );
   }
 
+  /* Water/Wave Effects */
+  .water-layer {
+    min-width: 3000px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 40%;
+    pointer-events: none;
+    z-index: 1;
+    background: linear-gradient(180deg, rgba(135, 206, 235, 0.3) 0%, rgba(70, 130, 180, 0.4) 100%);
+  }
+
+  .wave {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, transparent 0%, rgba(30, 144, 255, 0.3) 30%, rgba(30, 144, 255, 0.6) 60%, rgba(30, 144, 255, 0.3) 100%);
+    border-radius: 50% 50% 0 0;
+    animation: wave-move 16s linear infinite;
+  }
+
+  .wave:nth-child(2) {
+    animation-delay: -2s;
+    opacity: 0.7;
+    background: linear-gradient(180deg, transparent 0%, rgba(70, 130, 255, 0.3) 30%, rgba(70, 130, 182550, 0.6) 60%, rgba(70, 130, 255, 0.3) 100%);
+  }
+
+  .wave:nth-child(3) {
+    animation-delay: -4s;
+    opacity: 0.5;
+    background: linear-gradient(180deg, transparent 0%, rgba(100, 149, 255, 0.3) 30%, rgba(100, 149, 255, 0.6) 60%, rgba(100, 149, 255, 0.3) 100%);
+  }
+
+  @keyframes wave-move {
+    0% {
+      transform: translateX(-50%) translateY(0);
+    }
+    50% {
+      transform: translateX(0%) translateY(-10px);
+    }
+    100% {
+      transform: translateX(-50%) translateY(0);
+    }
+  }
+
+  /* Foam/Spray effects */
+  .foam {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, transparent 100%);
+    animation: foam-wave 6s ease-in-out infinite;
+  }
+
+  @keyframes foam-wave {
+    0%, 100% {
+      transform: translateY(0);
+      opacity: 0.3;
+    }
+    50% {
+      transform: translateY(-5px);
+      opacity: 0.6;
+    }
+  }
+
   .journey-track {
     display: flex;
     align-items: center;
@@ -261,6 +336,8 @@ import OdysseyLayout from '../layouts/OdysseyLayout.astro';
     transform: translateY(-50%);
     z-index: 1000;
     transition: left 0.3s ease;
+    transform: scale(2.0);
+    transform-origin: top left;
   }
 
   .encounter {
@@ -279,6 +356,7 @@ import OdysseyLayout from '../layouts/OdysseyLayout.astro';
     opacity: 0.9;
     transition: opacity 0.3s ease;
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+    transform: scale(1.5);
   }
 
   .encounter:hover .location-marker,
