@@ -85,7 +85,7 @@ import OdysseyLayout from '../layouts/OdysseyLayout.astro';
 
       <!-- Cyclops -->
       <div class="encounter" id="cyclops">
-        <div class="text-bubble">
+        <div class="text-bubble" style="top: -20px;">
           <h3>Polyphemus the Cyclops</h3>
           <p>Trapped in the cave of the one-eyed giant, Odysseus blinds him with a wooden stake and escapes by hiding under sheep.</p>
         </div>
@@ -102,17 +102,16 @@ import OdysseyLayout from '../layouts/OdysseyLayout.astro';
       </div>
 
       <!-- Aeolus -->
-      <div class="encounter" id="aeolus">
+      <div class="encounter" id="aeolus" style="top: -300px;">
         <div class="text-bubble">
           <h3>Aeolus, Keeper of the Winds</h3>
           <p>Aeolus gives Odysseus a bag containing all the winds except the west wind. His men open it, blowing them off course.</p>
         </div>
         <div class="location-marker">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <rect x="6" y="6" width="12" height="12" fill="#00e756"/>
-            <circle cx="12" cy="12" r="4" fill="#181425"/>
-            <rect x="10" y="8" width="4" height="8" fill="#00e756"/>
-          </svg>
+          <img src="/me/aeolia.png" alt="Aeolia" width="128" height="128" />
+        </div>
+        <div class="encounter-animation" id="aeolus-animation">
+          <!-- Aeolus-specific animations can go here -->
         </div>
       </div>
 
@@ -130,6 +129,9 @@ import OdysseyLayout from '../layouts/OdysseyLayout.astro';
             <rect x="10" y="10" width="4" height="4" fill="#181425"/>
           </svg>
         </div>
+        <div class="encounter-animation" id="laestrygonians-animation">
+          <!-- Laestrygonians-specific animations can go here -->
+        </div>
       </div>
 
       <!-- Circe -->
@@ -145,6 +147,9 @@ import OdysseyLayout from '../layouts/OdysseyLayout.astro';
             <rect x="10" y="14" width="4" height="2" fill="#181425"/>
             <rect x="8" y="16" width="8" height="2" fill="#29adff"/>
           </svg>
+        </div>
+        <div class="encounter-animation" id="circe-animation">
+          <!-- Circe-specific animations can go here -->
         </div>
       </div>
 
@@ -162,6 +167,9 @@ import OdysseyLayout from '../layouts/OdysseyLayout.astro';
             <rect x="10" y="10" width="4" height="4" fill="#ff004d"/>
           </svg>
         </div>
+        <div class="encounter-animation" id="underworld-animation">
+          <!-- Underworld-specific animations can go here -->
+        </div>
       </div>
 
       <!-- Sirens -->
@@ -177,6 +185,9 @@ import OdysseyLayout from '../layouts/OdysseyLayout.astro';
             <circle cx="14" cy="10" r="2" fill="#181425"/>
             <rect x="10" y="14" width="4" height="2" fill="#181425"/>
           </svg>
+        </div>
+        <div class="encounter-animation" id="sirens-animation">
+          <!-- Sirens-specific animations can go here -->
         </div>
       </div>
 
@@ -195,6 +206,9 @@ import OdysseyLayout from '../layouts/OdysseyLayout.astro';
             <rect x="12" y="12" width="4" height="4" fill="#ff004d"/>
           </svg>
         </div>
+        <div class="encounter-animation" id="scylla-charybdis-animation">
+          <!-- Scylla and Charybdis-specific animations can go here -->
+        </div>
       </div>
 
       <!-- Cattle of the Sun -->
@@ -209,6 +223,9 @@ import OdysseyLayout from '../layouts/OdysseyLayout.astro';
             <circle cx="12" cy="12" r="6" fill="#181425"/>
             <rect x="10" y="10" width="4" height="4" fill="#00e756"/>
           </svg>
+        </div>
+        <div class="encounter-animation" id="cattle-sun-animation">
+          <!-- Cattle of the Sun-specific animations can go here -->
         </div>
       </div>
 
@@ -227,6 +244,9 @@ import OdysseyLayout from '../layouts/OdysseyLayout.astro';
             <rect x="6" y="18" width="12" height="2" fill="#29adff"/>
           </svg>
         </div>
+        <div class="encounter-animation" id="calypso-animation">
+          <!-- Calypso-specific animations can go here -->
+        </div>
       </div>
 
       <!-- Ithaca - Home -->
@@ -243,6 +263,9 @@ import OdysseyLayout from '../layouts/OdysseyLayout.astro';
             <rect x="10" y="10" width="4" height="4" fill="#181425"/>
             <rect x="12" y="12" width="4" height="4" fill="#00e756"/>
           </svg>
+        </div>
+        <div class="encounter-animation" id="ithaca-animation">
+          <!-- Ithaca-specific animations can go here -->
         </div>
       </div>
     </div>
