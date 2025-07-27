@@ -1,0 +1,339 @@
+/* Water/Wave Effects */
+.water-layer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 55%;
+    pointer-events: none;
+    z-index: 1;
+    background: linear-gradient(180deg, rgba(135, 206, 235, 0.3) 0%, rgba(70, 130, 180, 0.4) 100%);
+  }
+
+  .wave {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, transparent 0%, rgba(30, 144, 255, 0.3) 30%, rgba(30, 144, 255, 0.6) 60%, rgba(30, 144, 255, 0.3) 100%);
+    border-radius: 50% 50% 0 0;
+    animation: wave-move 16s linear infinite;
+  }
+
+  .wave:nth-child(2) {
+    animation-delay: -2s;
+    opacity: 0.7;
+    background: linear-gradient(180deg, transparent 0%, rgba(70, 130, 255, 0.3) 30%, rgba(70, 130, 182550, 0.6) 60%, rgba(70, 130, 255, 0.3) 100%);
+  }
+
+  .wave:nth-child(3) {
+    animation-delay: -4s;
+    opacity: 0.5;
+    background: linear-gradient(180deg, transparent 0%, rgba(100, 149, 255, 0.3) 30%, rgba(100, 149, 255, 0.6) 60%, rgba(100, 149, 255, 0.3) 100%);
+  }
+
+  @keyframes wave-move {
+    0% {
+      transform: translateX(-50%) translateY(0);
+    }
+    50% {
+      transform: translateX(0%) translateY(-10px);
+    }
+    100% {
+      transform: translateX(-50%) translateY(0);
+    }
+  }
+
+  /* Foam/Spray effects */
+  .foam {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, transparent 100%);
+    animation: foam-wave 6s ease-in-out infinite;
+  }
+
+  @keyframes foam-wave {
+    0%, 100% {
+      transform: translateY(0);
+      opacity: 0.3;
+    }
+    50% {
+      transform: translateY(-5px);
+      opacity: 0.6;
+    }
+  }
+
+/* Swimming Men Animation for Lotus Eaters */
+.swimming-men {
+  position: absolute;
+  bottom: 25%;
+  left: 10%;
+  width: 100%;
+  height: 60px;
+  pointer-events: none;
+  z-index: 5;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.swimming-men.active {
+  opacity: 1;
+}
+
+.swimmer {
+  position: absolute;
+  bottom: 0;
+  width: 12px;
+  height: 8px;
+  background: #8B4513;
+  border-radius: 50% 50% 0 0;
+  animation: swim 5s ease-in-out infinite;
+}
+
+.swimmer:nth-child(1) {
+  left: 20%;
+  animation-delay: 0s;
+}
+
+.swimmer:nth-child(2) {
+  left: 40%;
+  animation-delay: 0.5s;
+}
+
+.swimmer:nth-child(3) {
+  left: 60%;
+  animation-delay: 1s;
+}
+
+.swimmer:nth-child(4) {
+  left: 80%;
+  animation-delay: 1.5s;
+}
+
+@keyframes swim {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  25% {
+    transform: translateY(-50px) translateX(10px);
+  }
+  50% {
+    transform: translateY(-100px) translateX(0px);
+  }
+  75% {
+    transform: translateY(-150px) translateX(10px);
+  }
+  100% {
+    transform: translateY(-200px) translateX(0);
+  }
+}
+
+/* Splash effects for Lotus Eaters */
+.splash {
+  position: absolute;
+  bottom: 0;
+  width: 8px;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  animation: splash-effect 1s ease-out infinite;
+}
+
+.splash:nth-child(5) {
+  left: 20%;
+  animation-delay: 0.2s;
+}
+
+.splash:nth-child(6) {
+  left: 40%;
+  animation-delay: 0.7s;
+}
+
+.splash:nth-child(7) {
+  left: 60%;
+  animation-delay: 1.2s;
+}
+
+.splash:nth-child(8) {
+  left: 80%;
+  animation-delay: 1.7s;
+}
+
+@keyframes splash-effect {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+/* Cyclops Animation */
+.cyclops-scene {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.cyclops-scene.active {
+  opacity: 1;
+}
+
+.odysseus-figure {
+  position: absolute;
+  bottom: 250px;
+  left: 20px;
+  width: 16px;
+  height: 24px;
+  background: #8B4513;
+  border-radius: 8px 8px 0 0;
+  animation: odysseus-appear 5s ease-in-out infinite;
+}
+
+.wooden-stake {
+  position: absolute;
+  bottom: 250px;
+  left: 20px;
+  width: 8px;
+  height: 20px;
+  background: #8b1331;
+  border-radius: 3px;
+  opacity: 1;
+  animation: throw-stake 5s ease-in-out infinite;
+}
+
+@keyframes odysseus-appear {
+  0% {
+    opacity: 1;
+    transform: translateX(-20px);
+  }
+  20% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  80% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+}
+
+@keyframes throw-stake {
+  0% {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(100px) translateY(-200px) rotate(45deg);
+  }
+}
+
+/* Wind Animation for Aeolus */
+.wind-scene {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  top: -150px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.wind-scene.active {
+  opacity: 1;
+}
+
+.cloud {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  animation: cloud-push 6s linear infinite;
+}
+
+.cloud-1 {
+  top: 20%;
+  right: 10%;
+  width: 30px;
+  height: 15px;
+  animation-delay: 0s;
+}
+
+.cloud-2 {
+  top: 40%;
+  right: 20%;
+  width: 25px;
+  height: 12px;
+  animation-delay: 2s;
+}
+
+.cloud-3 {
+  top: 60%;
+  right: 15%;
+  width: 35px;
+  height: 18px;
+  animation-delay: 4s;
+}
+
+.wind-gust {
+  position: absolute;
+  width: 40px;
+  height: 3px;
+  right: 50px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.9), transparent);
+  border-radius: 2px;
+  animation: gust-push 4s ease-in-out infinite;
+}
+
+.gust-1 {
+  top: 30%;
+  right: 5%;
+  animation-delay: 1s;
+}
+
+.gust-2 {
+  top: 50%;
+  right: 10%;
+  animation-delay: 3s;
+}
+
+@keyframes cloud-push {
+  0% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+}
+
+@keyframes gust-push {
+  0% {
+    transform: translateX(0) scaleX(0);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(-100px) scaleX(1.5);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-200px) scaleX(0);
+    opacity: 0;
+  }
+} 
