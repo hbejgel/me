@@ -85,7 +85,7 @@
 
 .swimmer {
   position: absolute;
-  bottom: 0;
+  bottom: -100px;
   width: 12px;
   height: 8px;
   background: #8B4513;
@@ -94,22 +94,22 @@
 }
 
 .swimmer:nth-child(1) {
-  left: 20%;
+  left: 15%;
   animation-delay: 0s;
 }
 
 .swimmer:nth-child(2) {
-  left: 40%;
+  left: 30%;
   animation-delay: 0.5s;
 }
 
 .swimmer:nth-child(3) {
-  left: 60%;
+  left: 45%;
   animation-delay: 1s;
 }
 
 .swimmer:nth-child(4) {
-  left: 80%;
+  left: 60%;
   animation-delay: 1.5s;
 }
 
@@ -118,23 +118,23 @@
     transform: translateY(0) translateX(0);
   }
   25% {
-    transform: translateY(-50px) translateX(10px);
+    transform: translateY(-60px) translateX(10px);
   }
   50% {
-    transform: translateY(-100px) translateX(0px);
+    transform: translateY(-120px) translateX(0px);
   }
   75% {
-    transform: translateY(-150px) translateX(10px);
+    transform: translateY(-180px) translateX(10px);
   }
   100% {
-    transform: translateY(-200px) translateX(0);
+    transform: translateY(-240px) translateX(0);
   }
 }
 
 /* Splash effects for Lotus Eaters */
 .splash {
   position: absolute;
-  bottom: 0;
+  bottom: -100px;
   width: 8px;
   height: 8px;
   background: rgba(255, 255, 255, 0.6);
@@ -143,22 +143,22 @@
 }
 
 .splash:nth-child(5) {
-  left: 20%;
+  left: 15%;
   animation-delay: 0.2s;
 }
 
 .splash:nth-child(6) {
-  left: 40%;
+  left: 30%;
   animation-delay: 0.7s;
 }
 
 .splash:nth-child(7) {
-  left: 60%;
+  left: 45%;
   animation-delay: 1.2s;
 }
 
 .splash:nth-child(8) {
-  left: 80%;
+  left: 60%;
   animation-delay: 1.7s;
 }
 
