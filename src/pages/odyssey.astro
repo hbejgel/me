@@ -111,7 +111,14 @@ import OdysseyLayout from '../layouts/OdysseyLayout.astro';
           <img src="/me/aeolia.png" alt="Aeolia" width="128" height="128" />
         </div>
         <div class="encounter-animation" id="aeolus-animation">
-          <!-- Aeolus-specific animations can go here -->
+          <!-- Wind animation -->
+          <div class="wind-scene">
+            <div class="cloud cloud-1"></div>
+            <div class="cloud cloud-2"></div>
+            <div class="cloud cloud-3"></div>
+            <div class="wind-gust gust-1"></div>
+            <div class="wind-gust gust-2"></div>
+          </div>
         </div>
       </div>
 
@@ -723,6 +730,105 @@ import OdysseyLayout from '../layouts/OdysseyLayout.astro';
   .odyssey-container::-webkit-scrollbar-thumb:hover {
     background: linear-gradient(90deg, #D2691E, #CD853F);
   }
+
+  /* Wind Animation for Aeolus */
+  .wind-scene {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: -150px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+
+  .wind-scene.active {
+    opacity: 1;
+  }
+
+  .cloud {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    animation: cloud-push 6s linear infinite;
+  }
+
+  .cloud-1 {
+    top: 20%;
+    right: 10%;
+    width: 30px;
+    height: 15px;
+    animation-delay: 0s;
+  }
+
+  .cloud-2 {
+    top: 40%;
+    right: 20%;
+    width: 25px;
+    height: 12px;
+    animation-delay: 2s;
+  }
+
+  .cloud-3 {
+    top: 60%;
+    right: 15%;
+    width: 35px;
+    height: 18px;
+    animation-delay: 4s;
+  }
+
+  .wind-gust {
+    position: absolute;
+    width: 40px;
+    height: 3px;
+    right: 50px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.9), transparent);
+    border-radius: 2px;
+    animation: gust-push 4s ease-in-out infinite;
+  }
+
+  .gust-1 {
+    top: 30%;
+    right: 5%;
+    animation-delay: 1s;
+  }
+
+  .gust-2 {
+    top: 50%;
+    right: 10%;
+    animation-delay: 3s;
+  }
+
+  @keyframes cloud-push {
+    0% {
+      transform: translateX(0);
+      opacity: 0;
+    }
+    20% {
+      opacity: 1;
+    }
+    80% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(-200px);
+      opacity: 0;
+    }
+  }
+
+  @keyframes gust-push {
+    0% {
+      transform: translateX(0) scaleX(0);
+      opacity: 0;
+    }
+    50% {
+      transform: translateX(-100px) scaleX(1.5);
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(-200px) scaleX(0);
+      opacity: 0;
+    }
+  }
 </style>
 
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Crimson+Text:ital,wght@0,400;1,400&display=swap" rel="stylesheet" />
@@ -735,6 +841,7 @@ import OdysseyLayout from '../layouts/OdysseyLayout.astro';
     const encounters = document.querySelectorAll('.encounter');
     const lotusSwimmingMen = document.querySelector('#lotus-animation .swimming-men');
     const cyclopsScene = document.querySelector('#cyclops-animation .cyclops-scene');
+    const windScene = document.querySelector('#aeolus-animation .wind-scene');
 
     document.querySelector('.journey-track').style.minWidth = container.scrollWidth + 'px';
 
@@ -802,6 +909,17 @@ import OdysseyLayout from '../layouts/OdysseyLayout.astro';
       } else {
         if (cyclopsScene) {
           cyclopsScene.classList.remove('active');
+        }
+      }
+      
+      // Trigger wind animation when Odysseus reaches aeolus
+      if (closestEncounter && closestEncounter.id === 'aeolus') {
+        if (windScene) {
+          windScene.classList.add('active');
+        }
+      } else {
+        if (windScene) {
+          windScene.classList.remove('active');
         }
       }
     });
