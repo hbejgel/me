@@ -93,7 +93,11 @@ import OdysseyLayout from '../layouts/OdysseyLayout.astro';
           <img src="/me/cyclops.png" alt="Cyclops" width="256" height="256" />
         </div>
         <div class="encounter-animation" id="cyclops-animation">
-          <!-- Cyclops-specific animations can go here -->
+          <!-- Cyclops animation -->
+          <div class="cyclops-scene">
+            <div class="odysseus-figure"></div>
+            <div class="wooden-stake"></div>
+          </div>
         </div>
       </div>
 
@@ -545,6 +549,72 @@ import OdysseyLayout from '../layouts/OdysseyLayout.astro';
     opacity: 1;
   }
 
+  /* Cyclops Animation */
+  .cyclops-scene {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+
+  .cyclops-scene.active {
+    opacity: 1;
+  }
+
+  .odysseus-figure {
+    position: absolute;
+    bottom: 250px;
+    left: 20px;
+    width: 16px;
+    height: 24px;
+    background: #8B4513;
+    border-radius: 8px 8px 0 0;
+    animation: odysseus-appear 5s ease-in-out infinite;
+  }
+
+  .wooden-stake {
+    position: absolute;
+    bottom: 250px;
+    left: 20px;
+    width: 8px;
+    height: 20px;
+    background: #8b1331;
+    border-radius: 3px;
+    opacity: 1;
+    animation: throw-stake 5s ease-in-out infinite;
+  }
+
+  @keyframes odysseus-appear {
+    0% {
+      opacity: 1;
+      transform: translateX(-20px);
+    }
+    20% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    80% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+  }
+
+  @keyframes throw-stake {
+    0%,{
+      opacity: 1;
+      transform: translateX(0) translateY(0);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(100px) translateY(-200px) rotate(45deg);
+    }
+  }
+
   .location-marker {
     margin-top: 8px;
     z-index: 1;
@@ -641,6 +711,7 @@ import OdysseyLayout from '../layouts/OdysseyLayout.astro';
     const odysseus = document.querySelector('.odysseus-character');
     const encounters = document.querySelectorAll('.encounter');
     const lotusSwimmingMen = document.querySelector('#lotus-animation .swimming-men');
+    const cyclopsScene = document.querySelector('#cyclops-animation .cyclops-scene');
 
     document.querySelector('.journey-track').style.minWidth = container.scrollWidth + 'px';
 
@@ -697,6 +768,17 @@ import OdysseyLayout from '../layouts/OdysseyLayout.astro';
       } else {
         if (lotusSwimmingMen) {
           lotusSwimmingMen.classList.remove('active');
+        }
+      }
+      
+      // Trigger cyclops animation when Odysseus reaches cyclops
+      if (closestEncounter && closestEncounter.id === 'cyclops') {
+        if (cyclopsScene) {
+          cyclopsScene.classList.add('active');
+        }
+      } else {
+        if (cyclopsScene) {
+          cyclopsScene.classList.remove('active');
         }
       }
     });
