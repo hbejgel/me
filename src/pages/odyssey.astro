@@ -15,7 +15,6 @@ import Ithaca from '../components/encounters/Ithaca.astro';
 ---
 
 <OdysseyLayout>
-  <script src="../components/encounters/odyssey.ts"></script> 
   <div class="odyssey-container">
     <!-- Fixed Title -->
     <div class="page-title">
@@ -150,7 +149,6 @@ import Ithaca from '../components/encounters/Ithaca.astro';
   }
 
   .journey-track {
-    min-width: 8000px;
     display: flex;
     align-items: center;
     width: 100%;
@@ -169,7 +167,7 @@ import Ithaca from '../components/encounters/Ithaca.astro';
     transform: scale(2.0);
     transform-origin: top left;
   }
-
+  
   /* Scrollbar styling */
   .odyssey-container::-webkit-scrollbar {
     height: 12px;
@@ -192,3 +190,5 @@ import Ithaca from '../components/encounters/Ithaca.astro';
 </style>
 
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Crimson+Text:ital,wght@0,400;1,400&display=swap" rel="stylesheet" />
+
+<script src="../components/encounters/odyssey.ts"></script> 
