@@ -4,6 +4,95 @@
 
 <style>
   @import './encounter-styles.css';
+  
+  /* Musical Notes Animation for Sirens */
+  .musical-notes {
+    position: absolute;
+    top: -105%;
+    left: 15%;
+    width: 100%;
+    height: 200px;
+    pointer-events: none;
+    z-index: 5;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+
+  .musical-notes.active {
+    opacity: 1;
+  }
+
+  .note {
+    position: absolute;
+    font-size: 24px;
+    color: #FFD700;
+    text-shadow: 0 0 8px rgba(255, 215, 0, 0.8);
+    animation: float-downward 6s linear infinite;
+  }
+  
+
+  .note-1 {
+    left: 18%;
+    top: -15%;
+    animation-delay: 0.5s;
+  }
+  
+
+  .note-2 {
+    left: 35%;
+    top: -22%;
+    animation-delay: 1s;
+  }
+  
+
+  .note-3 {
+    left: 65%;
+    top: -21%;
+    animation-delay: 1.5s;
+  }
+  /*
+
+  .note-4 {
+    left: 35%;
+    top: 20%;
+    animation-delay: 3s;
+  }
+
+  .note-5 {
+    left: 40%;
+    top: 8%;
+    animation-delay: 4s;
+  }
+
+  .note-6 {
+    left: 45%;
+    top: 12%;
+    animation-delay: 5s;
+  }
+    */
+
+  @keyframes float-downward {
+    0% {
+      transform: translateX(0) translateY(0) scale(0.5);
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+      transform: translateX(10px) translateY(20px) scale(0.8);
+    }
+    50% {
+      transform: translateX(30px) translateY(80px) scale(1);
+      opacity: 1;
+    }
+    80% {
+      transform: translateX(50px) translateY(120px) scale(1.2);
+      opacity: 0.8;
+    }
+    100% {
+      transform: translateX(70px) translateY(160px) scale(0.8);
+      opacity: 0;
+    }
+  }
 </style>
 
 <div class="encounter" id="sirens">
@@ -12,14 +101,15 @@
     <p>Odysseus has his men tie him to the mast to hear the Sirens' song while they plug their ears with wax.</p>
   </div>
   <div class="location-marker">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-      <circle cx="12" cy="12" r="10" fill="#29adff"/>
-      <circle cx="10" cy="10" r="2" fill="#181425"/>
-      <circle cx="14" cy="10" r="2" fill="#181425"/>
-      <rect x="10" y="14" width="4" height="2" fill="#181425"/>
-    </svg>
+    <img src="/me/sirens.png" alt="Sirens" width="256" height="256" />
   </div>
   <div class="encounter-animation" id="sirens-animation">
-    <!-- Sirens-specific animations can go here -->
+    <!-- Musical Notes Animation -->
+    <div class="musical-notes">
+      <div class="note note-1">♪</div>
+      <div class="note note-2">♫</div>
+      <div class="note note-3">♩</div>
+      <div class="note note-4">♪</div>
+    </div>
   </div>
 </div> 

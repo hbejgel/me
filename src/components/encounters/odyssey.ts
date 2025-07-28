@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ['cyclops', document.querySelector('#cyclops-animation .cyclops-scene') as HTMLElement],
     ['aeolus', document.querySelector('#aeolus-animation .wind-scene') as HTMLElement],
     ['circe', document.querySelector('#circe-animation .circe-scene') as HTMLElement],
+    ['sirens', document.querySelector('#sirens-animation .musical-notes') as HTMLElement],
     ['underworld', document.querySelector('#underworld-animation .underworld-scene') as HTMLElement]
   ]);
 
