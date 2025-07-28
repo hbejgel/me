@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Set journey track width dynamically
   const journeyTrack = document.querySelector('.journey-track') as HTMLElement;
   if (journeyTrack) {
-    journeyTrack.style.minWidth = container.scrollWidth + 'px';
+    journeyTrack.style.minWidth = Math.min(8000, container.scrollWidth) + 'px';
   }
 
   // Convert mouse wheel to horizontal scroll
