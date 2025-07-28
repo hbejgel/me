@@ -8,7 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const animationElements = new Map<string, HTMLElement>([
     ['lotus-eaters', document.querySelector('#lotus-animation .swimming-men') as HTMLElement],
     ['cyclops', document.querySelector('#cyclops-animation .cyclops-scene') as HTMLElement],
-    ['aeolus', document.querySelector('#aeolus-animation .wind-scene') as HTMLElement]
+    ['aeolus', document.querySelector('#aeolus-animation .wind-scene') as HTMLElement],
+    ['circe', document.querySelector('#circe-animation .circe-scene') as HTMLElement]
   ]);
 
   if (!container || !odysseus) return;
