@@ -111,6 +111,21 @@ import Ithaca from '../components/encounters/Ithaca.astro';
   }
 
   /* Mobile responsive adjustments */
+  @media (max-width: 480px) {
+    .page-title h1 {
+      font-size: 1.2rem;
+    }
+    
+    .text-bubble {
+      margin-top: 50px;
+    }
+
+    /* Additional mobile fixes */
+    .odysseus-character {
+      transform: scale(1.5) !important;
+    }
+  }
+  
   @media (max-width: 768px) {
     .page-title {
       padding: 10px 0;
@@ -131,21 +146,6 @@ import Ithaca from '../components/encounters/Ithaca.astro';
       position: fixed;
       width: 100%;
       height: 100%;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .page-title h1 {
-      font-size: 1.2rem;
-    }
-    
-    .text-bubble {
-      margin-top: 50px;
-    }
-
-    /* Additional mobile fixes */
-    .odysseus-character {
-      transform: scale(1.5) !important;
     }
   }
 
