@@ -37,6 +37,28 @@ document.addEventListener('DOMContentLoaded', () => {
     const odysseusLeft = minLeft + (scrollProgress * (maxLeft - minLeft));
     odysseus.style.left = `${odysseusLeft}px`;
 
+    // Check if Odysseus has reached or passed Laestrygonians
+    const laestrygoniansEncounter = document.querySelector('#laestrygonians') as HTMLElement;
+    const fleetShips = document.querySelectorAll('.fleet-ship');
+    
+    if (laestrygoniansEncounter) {
+      const laestrygoniansRect = laestrygoniansEncounter.getBoundingClientRect();
+      const odysseusRect = odysseus.getBoundingClientRect();
+      
+      // Check if Odysseus has reached or passed Laestrygonians
+      const hasReachedLaestrygonians = odysseusRect.right >= laestrygoniansRect.left;
+      
+      fleetShips.forEach((ship) => {
+        if (hasReachedLaestrygonians) {
+          (ship as HTMLElement).style.opacity = '0';
+          (ship as HTMLElement).style.transform = 'scale(0.8)';
+        } else {
+          (ship as HTMLElement).style.opacity = '1';
+          (ship as HTMLElement).style.transform = 'scale(1)';
+        }
+      });
+    }
+
     // Find the encounter closest to Odysseus
     let closestEncounter: Element | null = null;
     let closestDistance = Infinity;
