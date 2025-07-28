@@ -1,0 +1,90 @@
+/* Shared encounter styles for all encounter components */
+
+.encounter {
+  position: relative;
+  margin: 0 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 280px;
+  top: -10%;
+}
+
+.encounter-animation {
+  position: absolute;
+  bottom: -200px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  height: 200px;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.location-marker {
+  margin-top: 8px;
+  z-index: 1;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  transform: scale(1.5);
+}
+
+.encounter:hover .location-marker,
+.encounter.active .location-marker {
+  opacity: 1;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
+}
+
+.text-bubble {
+  background: linear-gradient(135deg, #F5F5DC 0%, #DEB887 100%);
+  border: 3px solid #8B4513;
+  border-radius: 8px;
+  padding: 18px 28px;
+  min-width: 260px;
+  max-width: 340px;
+  text-align: center;
+  opacity: 0;
+  margin-bottom: 18px;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+  position: relative;
+}
+
+.text-bubble::before {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 12px solid #8B4513;
+}
+
+.encounter:hover .text-bubble,
+.encounter.active .text-bubble {
+  opacity: 1;
+}
+
+.text-bubble h3 {
+  color: #8B4513;
+  font-family: 'Cinzel', 'Times New Roman', serif;
+  font-size: 0.8rem;
+  margin: 0 0 10px 0;
+  letter-spacing: 0.02em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.text-bubble p {
+  color: #2C1810;
+  font-family: 'Crimson Text', 'Times New Roman', serif;
+  font-size: 1rem;
+  line-height: 1.4;
+  margin: 0;
+  font-style: italic;
+}
