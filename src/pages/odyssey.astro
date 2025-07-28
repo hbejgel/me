@@ -65,6 +65,7 @@ import Ithaca from '../components/encounters/Ithaca.astro';
   .odyssey-container {
     width: 100%;
     height: 100vh;
+    height: 100dvh; /* Dynamic viewport height for mobile */
     overflow-x: auto;
     overflow-y: hidden;
     background: linear-gradient(90deg, #2C1810 0%, #8B4513 20%, #D2691E 50%, #8B4513 80%, #2C1810 100%);
@@ -119,6 +120,14 @@ import Ithaca from '../components/encounters/Ithaca.astro';
     .text-bubble {
       margin-top: 60px;
     }
+
+    /* Prevent vertical scrolling on mobile */
+    body, html {
+      overflow-y: hidden;
+      position: fixed;
+      width: 100%;
+      height: 100%;
+    }
   }
 
   @media (max-width: 480px) {
@@ -128,6 +137,11 @@ import Ithaca from '../components/encounters/Ithaca.astro';
     
     .text-bubble {
       margin-top: 50px;
+    }
+
+    /* Additional mobile fixes */
+    .odysseus-character {
+      transform: scale(1.5) !important;
     }
   }
 
@@ -139,6 +153,9 @@ import Ithaca from '../components/encounters/Ithaca.astro';
     padding: 0;
     position: relative;
     min-width: 8000px;
+    /* Ensure content doesn't overflow vertically on mobile */
+    max-height: 100vh;
+    max-height: 100dvh;
   }
 
   .odysseus-character {
