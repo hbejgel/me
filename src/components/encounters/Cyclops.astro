@@ -4,7 +4,71 @@
 
 <style>
   @import './encounter-styles.css';
-  @import './animations.css';
+  .cyclops-scene {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.cyclops-scene.active {
+  opacity: 1;
+}
+
+.odysseus-figure {
+  position: absolute;
+  bottom: 250px;
+  left: 20px;
+  width: 16px;
+  height: 24px;
+  background: #8B4513;
+  border-radius: 8px 8px 0 0;
+  animation: odysseus-appear 5s ease-in-out infinite;
+}
+
+.wooden-stake {
+  position: absolute;
+  bottom: 250px;
+  left: 20px;
+  width: 4px;
+  height: 36px;
+  background: #8B4513;
+  border-radius: 3px;
+  opacity: 1;
+  animation: throw-stake 5s ease-in-out infinite;
+}
+
+@keyframes odysseus-appear {
+  0% {
+    opacity: 1;
+    transform: translateX(-20px);
+  }
+  20% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  80% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+}
+
+@keyframes throw-stake {
+  0% {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(100px) translateY(-200px) rotate(45deg);
+  }
+}
+
 </style>
 
 <div class="encounter" id="cyclops">
