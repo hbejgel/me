@@ -162,26 +162,46 @@ import Ithaca from '../components/encounters/Ithaca.astro';
     position: absolute;
     opacity: 1.0;
     transition: all 0.3s ease;
+    animation: ship-bob 3s ease-in-out infinite;
+  }
+
+  .odysseus-character .main-ship {
+    position: relative;
+    z-index: 2;
+    animation: ship-bob 3s ease-in-out infinite;
+  }
+
+  @keyframes ship-bob {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
   }
 
   .odysseus-character .ship-1 {
     top: -15px;
     left: -25px;
+    animation-delay: 0s;
   }
 
   .odysseus-character .ship-2 {
     top: 40px;
     right: -30px;
+    animation-delay: 0.5s;
   }
 
   .odysseus-character .ship-3 {
     bottom: -20px;
     left: -15px;
+    animation-delay: 1s;
   }
 
   .odysseus-character .ship-4 {
     bottom: 50px;
     right: -15px;
+    animation-delay: 1.5s;
   }
 
 
