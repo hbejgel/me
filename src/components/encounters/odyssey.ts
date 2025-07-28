@@ -9,8 +9,13 @@ document.addEventListener('DOMContentLoaded', () => {
     ['lotus-eaters', document.querySelector('#lotus-animation .swimming-men') as HTMLElement],
     ['cyclops', document.querySelector('#cyclops-animation .cyclops-scene') as HTMLElement],
     ['aeolus', document.querySelector('#aeolus-animation .wind-scene') as HTMLElement],
-    ['circe', document.querySelector('#circe-animation .circe-scene') as HTMLElement]
+    ['circe', document.querySelector('#circe-animation .circe-scene') as HTMLElement],
+    ['underworld', document.querySelector('#underworld-animation .underworld-scene') as HTMLElement]
   ]);
+
+  // Special handling for Underworld overlay
+  const underworldOverlay = document.querySelector('#underworld-overlay') as HTMLElement;
+  const underworldBubble = document.querySelector('#underworld-bubble') as HTMLElement;
 
   if (!container || !odysseus) return;
 
@@ -101,6 +106,21 @@ document.addEventListener('DOMContentLoaded', () => {
       const animationElement = animationElements.get(closestEncounterId);
       if (animationElement) {
         animationElement.classList.add('active');
+      }
+    }
+
+    // Special handling for Underworld overlay
+    if (underworldOverlay) {
+      if (closestEncounterId === 'underworld') {
+        underworldOverlay.classList.add('active');
+        if (underworldBubble) {
+          underworldBubble.classList.add('active');
+        }
+      } else {
+        underworldOverlay.classList.remove('active');
+        if (underworldBubble) {
+          underworldBubble.classList.remove('active');
+        }
       }
     }
   });
