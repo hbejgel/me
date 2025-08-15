@@ -110,6 +110,11 @@ import Ithaca from '../components/encounters/Ithaca.astro';
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   }
 
+  .water-layer {
+    min-width: 8000px;
+    width: 8000px;
+  }
+
   /* Mobile responsive adjustments */
   @media (max-width: 480px) {
     .page-title h1 {
@@ -160,6 +165,8 @@ import Ithaca from '../components/encounters/Ithaca.astro';
     /* Ensure content doesn't overflow vertically on mobile */
     max-height: 100vh;
     max-height: 100dvh;
+    /* Ensure water layer spans full width */
+    overflow: visible;
   }
 
   .odysseus-character {

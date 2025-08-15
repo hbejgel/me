@@ -1,6 +1,7 @@
 /* Water/Wave Effects - Shared Animation */
 .water-layer {
     width: 100%;
+    min-width: 8000px; /* Match journey-track min-width */
     position: absolute;
     bottom: 0;
     left: 0;
@@ -8,12 +9,16 @@
     pointer-events: none;
     z-index: 1;
     background: linear-gradient(180deg, rgba(135, 206, 235, 0.3) 0%, rgba(70, 130, 180, 0.4) 100%);
+    /* Ensure water spans full journey width */
+    right: 0;
+    overflow: hidden;
   }
 
   .wave {
     position: absolute;
     bottom: 0;
     width: 100%;
+    min-width: 8000px;
     height: 100%;
     background: linear-gradient(180deg, transparent 0%, rgba(30, 144, 255, 0.3) 30%, rgba(30, 144, 255, 0.6) 60%, rgba(30, 144, 255, 0.3) 100%);
     border-radius: 50% 50% 0 0;
@@ -50,6 +55,7 @@
     bottom: 0;
     left: 0;
     width: 100%;
+    min-width: 8000px;
     height: 20px;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, transparent 100%);
     animation: foam-wave 6s ease-in-out infinite;
