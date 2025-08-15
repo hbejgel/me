@@ -14,6 +14,8 @@
   opacity: 0;
   transition: opacity 1s ease;
   pointer-events: none;
+  /* Ensure proper stacking context */
+  isolation: isolate;
 }
 
 .underworld-overlay.active {
@@ -113,7 +115,7 @@
 }
 
 .underworld-bubble {
-  position: absolute;
+  position: fixed;
   top: 80px;
   left: 50%;
   transform: translateX(-50%);
@@ -127,12 +129,59 @@
   opacity: 0;
   transition: all 1s ease;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
-  z-index: 10001;
-  position: relative;
+  z-index: 10003;
+  /* Ensure bubble is always on top */
+  pointer-events: auto;
 }
 
 .underworld-bubble.active {
   opacity: 1;
+}
+
+/* Ensure bubble is visible on all devices */
+.underworld-bubble {
+  /* Add backdrop for better readability */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  
+  /* Ensure it's above everything */
+  isolation: isolate;
+  
+  /* Prevent any clipping */
+  overflow: visible;
+  
+  /* Ensure proper stacking context */
+  transform-style: preserve-3d;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  .underworld-bubble {
+    top: 60px;
+    left: 20px;
+    transform: none;
+    min-width: 180px;
+    max-width: 240px;
+    padding: 15px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .underworld-bubble {
+    top: 50px;
+    left: 15px;
+    min-width: 160px;
+    max-width: 200px;
+    padding: 12px 16px;
+  }
+  
+  .underworld-bubble h3 {
+    font-size: 0.8rem;
+  }
+  
+  .underworld-bubble p {
+    font-size: 0.9rem;
+  }
 }
 
 
@@ -165,7 +214,7 @@
     <p>Odysseus consults the prophet Tiresias, who warns him of the challenges ahead and the suitors in his home.</p>
   </div>
   <!-- Tiresias Image -->
-  <img src="/me/tiresias.png" alt="Tiresias the Prophet" style="position: absolute; bottom: 18%; left: 50%; transform: translateX(-50%); z-index: 10002; width: 80vw; height: auto; max-width: 600px; max-height: 70vh;" />
+  <img src="/me/tiresias.png" alt="Tiresias the Prophet" style="position: absolute; bottom: 18%; left: 50%; transform: translateX(-50%); z-index: 10001; width: 80vw; height: auto; max-width: 600px; max-height: 70vh;" />
   <!-- Ghostly Spirits -->
   <div class="ghost-spirit"></div>
   <div class="ghost-spirit"></div>
