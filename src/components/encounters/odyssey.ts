@@ -117,11 +117,15 @@ document.addEventListener('DOMContentLoaded', () => {
         if (underworldBubble) {
           underworldBubble.classList.add('active');
         }
+        // Add class to container for enhanced scrollbar visibility
+        container.classList.add('underworld-active');
       } else {
         underworldOverlay.classList.remove('active');
         if (underworldBubble) {
           underworldBubble.classList.remove('active');
         }
+        // Remove class from container when leaving Underworld
+        container.classList.remove('underworld-active');
       }
     }
   });

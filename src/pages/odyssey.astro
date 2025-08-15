@@ -84,6 +84,9 @@ import Ithaca from '../components/encounters/Ithaca.astro';
         rgba(255, 255, 255, 0.03) 10px,
         rgba(255, 255, 255, 0.03) 20px
       );
+    /* Ensure scrollbar is always visible */
+    scrollbar-width: thin;
+    scrollbar-color: #8B4513 #2C1810;
   }
 
   /* Fixed Title */
@@ -129,6 +132,8 @@ import Ithaca from '../components/encounters/Ithaca.astro';
     .odysseus-character {
       transform: scale(1.5) !important;
     }
+    
+
   }
   
   @media (max-width: 768px) {
@@ -238,21 +243,43 @@ import Ithaca from '../components/encounters/Ithaca.astro';
 
   /* Scrollbar styling */
   .odyssey-container::-webkit-scrollbar {
-    height: 12px;
+    height: 16px; /* Make scrollbar taller */
+    z-index: 10005; /* Ensure it's above everything */
   }
 
   .odyssey-container::-webkit-scrollbar-track {
     background: #2C1810;
+    z-index: 10005;
   }
 
   .odyssey-container::-webkit-scrollbar-thumb {
     background: linear-gradient(90deg, #8B4513, #D2691E);
-    border-radius: 6px;
+    border-radius: 8px;
+    z-index: 10005;
+    /* Ensure scrollbar is always visible */
+    opacity: 1 !important;
+    visibility: visible !important;
   }
 
   .odyssey-container::-webkit-scrollbar-thumb:hover {
     background: linear-gradient(90deg, #D2691E, #CD853F);
   }
+
+  /* Firefox scrollbar styling */
+  .odyssey-container {
+    scrollbar-width: thin;
+    scrollbar-color: #8B4513 #2C1810;
+  }
+
+  /* Enhanced scrollbar visibility during Underworld */
+  .odyssey-container.underworld-active::-webkit-scrollbar-thumb {
+    background: linear-gradient(90deg, #D2691E, #CD853F);
+    /* Keep the same styling but ensure visibility */
+  }
+
+
+
+
 
 
 </style>
