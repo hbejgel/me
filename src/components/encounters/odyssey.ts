@@ -32,6 +32,53 @@ document.addEventListener('DOMContentLoaded', () => {
     container.scrollLeft += e.deltaY;
   });
 
+  // Handle touch events for mobile devices
+  let touchStartY = 0;
+  let touchStartX = 0;
+  let isScrolling = false;
+
+  container.addEventListener('touchstart', (e: TouchEvent) => {
+    if (e.touches.length === 1) {
+      touchStartY = e.touches[0].clientY;
+      touchStartX = e.touches[0].clientX;
+      isScrolling = false;
+    }
+  }, { passive: false });
+
+  container.addEventListener('touchmove', (e: TouchEvent) => {
+    if (e.touches.length === 1) {
+      const touchY = e.touches[0].clientY;
+      const touchX = e.touches[0].clientX;
+      const deltaY = touchStartY - touchY;
+      const deltaX = touchStartX - touchX;
+
+      // Determine if this is a vertical or horizontal scroll gesture
+      if (!isScrolling) {
+        if (Math.abs(deltaY) > Math.abs(deltaX) && Math.abs(deltaY) > 10) {
+          // Vertical scroll detected - convert to horizontal
+          e.preventDefault();
+          container.scrollLeft += deltaY;
+          isScrolling = true;
+        } else if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 10) {
+          // Horizontal scroll detected - allow normal behavior
+          isScrolling = true;
+        }
+      } else if (Math.abs(deltaY) > Math.abs(deltaX)) {
+        // Continue vertical-to-horizontal conversion
+        e.preventDefault();
+        container.scrollLeft += deltaY;
+      }
+
+      // Update start positions for continuous scrolling
+      touchStartY = touchY;
+      touchStartX = touchX;
+    }
+  }, { passive: false });
+
+  container.addEventListener('touchend', () => {
+    isScrolling = false;
+  });
+
   container.addEventListener('scroll', () => {
     const scrollLeft = container.scrollLeft;
     const containerWidth = container.clientWidth;
